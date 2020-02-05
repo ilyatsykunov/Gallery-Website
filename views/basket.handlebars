@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8", content="width=device-width, initial-scale=1">
+        <title>Your basket</title><html>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+            function toggleSidemenu(){ 
+                document.getElementById("sidemenu").classList.toggle('active')
+                if (document.getElementById("sidemenu").classList == 'active')
+                    document.getElementById("body").style.marginLeft = "200px";
+                else
+                    document.getElementById("body").style.marginLeft = "5px";
+            }
+        </script>
+    </head>
+
+<body id="body">
+
+    	{{#if data.successMsg}}
+ 			<p class="msg-success">{{data.successMsg}}</p>
+		{{/if}}
+        {{#if data.errorMsg}}
+ 			<p class="msg-danger">{{data.errorMsg}}</p>
+		{{/if}}
+    <section class="container">
+        <section class="header">
+            <a href="/" class="header_logo center"><button><img src="WebxLogo.png"/></button></a>
+            <section id="sidemenu">
+                <section class="toggle-btn" onclick="toggleSidemenu()">
+                    <a>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </section>
+                <ul>
+                    <a href="/"><li> Home  </li></a>
+                    {{#if data.authorised}}
+                        <a href="basket"><li> Basket</li></a>
+                        <a href="sell"><li> Sell </li></a>
+                        <a href="myItems"><li> My Items </li></a>
+                        <a href="account"><li> Account </li></a>
+                        <a href="logout"><li> Logout </li></a>
+                    {{else}}
+                        <a href="login"><li> Login </li></a>
+                        <a href="register"><li> Sign Up </li></a>
+                    {{/if}}
+                    <a href="about"><li> About </li></a>
+                    <a href="contact"><li> Contact </li></a>
+                </ul>
+            </section>
+        </section>
+        <h1>Your basket</h1>
+        <section class="basket_left">
+            {{#each items}}
+                <section class="basket_left-item">
+
+                    <a href="/{{itemID}}"><img src="{{imageDir1}}" alt="No picture found" width="600" height="400"></a>
+                        <section class="basket_left-item-description">
+                            <a href="/{{itemID}}"><h3 id="basket_left-item-description-title">{{item}} ({{year}})</h3></a> <h3 id="basket_left-item-description-price">£{{price}}</h3>
+                            <p>{{sDescription}}</p>
+                            <p>By {{artist}}</p>
+                            <p>{{medium}}</p>
+                            <p>{{size}}</p>
+                            <p>#{{itemID}}</p>
+                        </section>
+                </section>
+            {{/each}}
+        </section>
+        <section class="basket_right">
+            <h3 class="center">Order Summary</h3>
+            <h3 id="basket_right-total">Total: £{{data.total}}</h3>
+
+            <a href="/checkout"><input class="basket_right-btn" type="submit" value="Checkout with PayPal"></a>
+        </section>
+
+    </section>
+</body>
+<footer> 
+    <section class="footer-left"><p>Project for Coventry University | 2019 | This webpage was made by WebX team.</p></section>
+    <section class="footer-center"><a href="/" class="footerNav"><p>Home </a><a href="about" class="footerNav">About </a><a href="contact" class="footerNav">Contact </p></a></section>
+    <section class="footer-right"><p>Contact: <a href="contact" class="footerNav">webxgallery@gmail.com</a></p></section>
+</footer> 
+<script type="text/javascript">
+    //Put footer at the bottom of the window if page is too short
+    const bodyHeight = document.querySelector("body").offsetHeight
+    const footer = document.querySelector("footer")
+    if(bodyHeight < window.innerHeight){
+        footer.classList.add("bottom")
+    }
+</script>
+</html>

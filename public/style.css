@@ -1,0 +1,1047 @@
+/* IMPORTANT - Do not create another stylesheet, if you need to do something specific - use classes */
+
+/* ############################################# ALL PAGES ############################################# */
+a, a:visited, a:active, a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.gallery-item {
+  float: left;
+  width: 180px;
+  background: #f5f4f2;
+  margin: 16px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  word-break:break-word;
+}
+
+.gallery-item-edit h3{
+  color: #00aeff;
+  transition: color 0.3s;
+}
+.gallery-item-edit:hover h3{
+  color: #0084c2;
+}
+.italicstext {
+  font-style: italic;
+  text-align: center;
+  font-size: 20px;
+}
+
+.gallery-item img{
+  transition: opacity 0.3s;
+}
+.gallery-item:hover img{
+  opacity: 0.7;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: black;
+}
+
+
+.profilepicture {
+  margin-bottom: 50px;
+  position: relative;
+  align-self: center;
+  overflow: hidden;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+}
+
+.profilepictureframe {
+  border: 2px solid black;
+  width: auto;
+  position: relative;
+  right: 20px;
+  padding: 20px;
+  float: right;
+  overflow: hidden;
+}
+
+.accountleftframe {
+  border: 2px solid black;
+  width: 30%;
+  height: auto;
+  position: relative;
+  left: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+
+.gallery-item-description {
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow: ellipsis;
+}
+.gallery-item-description h3, .gallery-item-description p{
+  padding-left: 5px;
+}
+.gallery-item-description h3{
+  margin: 0;
+}
+.gallery-item-status{
+  color: #00aeff;
+}
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 50%;
+  padding: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.header{
+  width: 100%;
+  height: 70px;
+  background: #f5f4f2;
+}
+
+.search-container {
+  position: relative;
+  right: 0;
+}
+
+.search-container  button:hover {
+  background: #ccc;
+}
+
+.search-container input[type=text], .search-container button {
+
+  padding: 6px 10px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+.header_logo, .header_logo button, .header_logo img, .header_logo a{
+  height: 70px;
+  width: 70px;
+  padding: 0;
+  object-fit: cover;
+  border: 0;
+  background: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.header_logo:hover{
+  opacity: 0.7;
+}
+
+.spaceunderneath20{
+  padding-bottom: 20px;
+}
+
+.underlinespace30{
+  border-bottom: 1px solid black;
+  padding-bottom: 30px; 
+}
+
+.spaceunderneath10{
+  padding-bottom: 10px;
+}
+
+
+footer{
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  min-width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #f5f4f2;
+  opacity: 1;
+  display: inline-block;
+ }
+ footer.bottom{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+ }
+.footerNav{
+  transition: opacity 0.3s;
+}
+.footerNav:hover{
+  opacity: 0.7;
+}
+.footer-left{
+  width: 40%;
+  float: left;
+}
+.footer-center{
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+.footer-right{
+  width: 30%;
+  float: right;
+}
+.footer-right p{
+  float: right;
+}
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 750;
+}
+.small {
+  font-size: small; 
+  color: red
+}
+
+h4 {
+  color: black;
+  font-size: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.large-text {
+  font-size: xx-large;
+}
+.disabled {
+  display: none;
+  visibility: hidden;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+
+
+   /* Validation message success */
+  .msg-success {
+    border: 1px solid green;
+    font-weight: bold;
+    color: green;
+    padding: 1em;
+  }
+  
+  /* Validation message error */
+  .msg-danger {
+    border: 1px solid red;
+    font-weight: bold;
+    color: red;
+    padding: 1em;
+  }
+/* ############################################# END OF ALL PAGES ############################################# */
+
+
+
+
+
+ /* ############################################# DETAIL PAGE ############################################# */
+ .detail_title{
+  width: 100%;
+  height: auto;
+  background: none;
+  text-align: center;
+  
+}
+.detail_top{
+  width: 100%;
+  height: auto;
+  display: flexbox;
+}
+.detail_top h1{
+  width: 80%;
+  word-break:break-word;
+}
+#detail_top-status{
+  color: #00aeff;
+}
+.detail_image_previews{
+  width: calc(10% - 70px);
+  height: 500px;
+  float: left;
+  margin-left: 50px;
+  margin-right: 20px;
+  flex-direction: column;   
+  background: #f5f4f2;
+}
+.detail_image_previews img{
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+.inactive{
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.inactive:hover{
+  opacity: 1;
+}
+.detail_image_main{
+  width: 50%;
+  height: 500px;
+  background: #f5f4f2;
+  flex-direction: column;
+  float: left;
+}
+.detail_image_main img{
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+  padding: 50px 0 50px 0;
+  display: block;
+  margin: 0 auto;
+}
+.detail_description{
+  width: calc(40% - 70px);
+  height: auto;
+  flex-direction: column;
+  float: right;
+  margin-left: 20px;
+  margin-right: 50px;
+  word-break:break-word;
+}
+.detail_description button, .detail_seller button{
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#detail_description-buyitnow{
+  background: #00aeff;
+  font-weight: 550;
+  color: #ffffff;
+}
+#detail_description-buyitnow:hover{
+  background: #0084c2;
+}
+#detail_description-addtobasket{
+  background: #00aeff;
+  font-weight: 550;
+  color: #ffffff;
+}
+#detail_description-addtobasket:hover{
+  background: #0084c2;
+}
+#detail_description-favourite{
+  background: #f5f4f2;
+  color: #000000;
+}
+#detail_description-favourite h3{
+  font-weight: 400;
+}
+#detail_description-favourite:hover{
+  background: #cfcdc8;
+}
+#fav-count{
+  color: #00aeff;
+}
+.detail_bottom{
+  margin-top: 50px;
+  display: flexbox;
+  width: calc(100% - 100px);
+  height: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.detail_more_description{
+  width: 70%;
+  height: auto;
+  flex-direction: column;
+  float: left;
+  word-break:break-word;
+}
+.detail_more_description p, .detail_more_description h3{
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+  height: auto;
+}
+.detail_seller{
+  width: 30%;
+  height: auto;
+  flex-direction: column;
+  background: #f5f4f2;
+  float: right;
+  word-break:break-word;
+}
+.detail_seller p, .detail_seller h3{
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+}
+#detail_seller-contact{
+  width: calc(100% - 10px);
+  height: 50px;
+  margin: 0 5px 0 5px;
+  background: #00aeff;
+  font-weight: 550;
+  color: #ffffff;
+}
+#detail_seller-contact:hover{
+  background: #0084c2;
+}
+
+
+/* ############################################# END OF DETAIL PAGE ############################################# */
+.msg-danger {
+  border: 1px solid red;
+  font-weight: bold;
+  color: red;
+  padding: 1em;
+}
+
+/* ############################################# MENU ############################################# */
+/*Menu Customisation */
+#sidemenu{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #cfcdc8;
+  transition: all 100ms linear;
+  left: -210px;
+  top: 0px;
+ }
+ /* The text within the menu */
+ #sidemenu ul li{
+  color: black;
+  padding:  20px;
+  padding-left: 0px;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+ }
+ /*  */
+ #sidemenu.active{
+  left: 0px;
+ }
+ /* Position of sidemenu Button */
+ #sidemenu .toggle-btn{
+  position: absolute;
+  left: 230px;
+  top: 15px;
+ }
+ /* The sidemenu button */
+ #sidemenu .toggle-btn span{
+  display: block;
+  width: 30px;
+  margin: 5px 0px;
+  height: 5px;
+  padding-left: 5px;
+  background: #4CAF50;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+ }
+  /*Menu Customisation */
+  #sidemenu{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #cfcdc8;
+    transition: all 100ms linear;
+    left: -210px;
+    top: 0px;
+   }
+   /* The text within the menu */
+   #sidemenu ul{
+     margin: 0;
+     padding: 0;
+   }
+   #sidemenu li{
+    list-style: none;
+    color: black;
+    padding-left: 0px;
+    width: 200px;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+    text-align: center;
+    background: #cfcdc8;
+    transition: background 0.3s;
+   }
+   #sidemenu li:hover{
+    background: #f5f4f2;
+   }
+   /*  */
+   #sidemenu.active{
+    left: 0px;
+   }
+   /* Position of sidemenu Button */
+   .toggle-btn{
+    position: absolute;
+    left: 230px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 1;
+    transition: background 0.3s;
+   }
+
+   #sidemenu .toggle-btn span{
+    display: block;
+    width: 30px;
+    margin: 5px 0px;
+    height: 5px;
+    padding-left: 5px;
+    background: #00aeff;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+   }
+
+   #sidemenu .toggle-btn:hover span{
+    background: #0084c2;
+   }
+   
+   .blockoftext {
+    font-size: xx-large;
+  }
+
+  .aboutimage {
+    width: 30%;
+    height: auto;
+    align-items: center;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .aboutheader {
+    padding: 90px;
+    margin-top: 70px;
+    margin: 0px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 50px;
+  }
+
+  .aboutheader3 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    text-decoration: underline;
+  }
+
+.aboutheader {
+    padding: 90px;
+    margin-top: 70px;
+    margin: 0px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 50px;
+  }
+
+/* ############################################# END OF MENU ############################################# */
+
+
+
+
+
+ /* ############################################# SELL PAGE ############################################# */
+
+.sell_form{
+  width: auto;
+  text-align: center;
+}
+.sell_form input[type=text], .sell_form textarea {
+  width: 400px;
+  min-height: 30px;
+}
+#sell_form-sDescription{
+  height: 100px;
+}
+#sell_form-lDescription{
+  height: 200px;
+}
+/* ############################################# END OF SELL PAGE ############################################# */
+
+
+/* ############################################# ABOUT PAGE ############################################# */
+
+
+
+* {box-sizing:border-box}
+  
+.mySlides {
+  display: none;
+}
+
+/* Sliding images container */
+.slideshow-container {
+  max-height: 700px;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  top: 10px;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.active, .dot:hover {
+  background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Parallax design */
+.scrollingimage {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("landscape_art_road_127350_3840x2400.jpg");
+  height: 500px;
+}
+
+/* ############################################# END OF ABOUT PAGE ############################################# */
+
+
+ /* ############################################# BASKET PAGE ############################################# */
+ .basket_left{
+   width: 60%;
+   height: auto;
+   float: left;
+   word-break:break-word;
+ }
+ .basket_left-item{
+   width: 90%;
+   margin: 0 5% 0 5%;
+ }
+ .basket_left-item img{
+   height: auto;
+   width: 51%;
+   float: left;
+   padding-bottom: 50px;
+}
+.basket_left-item-description{
+  width: 49%;
+  float: left;
+  padding-bottom: 50px;
+}
+#basket_left-item-description-title{
+  width: 70%;
+  float: left;
+  text-align: left;
+}
+#basket_left-item-description-price{
+  width: 30%;
+  float: right;
+  text-align: right;
+}
+.basket_left-item-description h3{
+  padding: 0 15px 5px 15px;
+  margin: 0;
+}
+.basket_left-item-description p{
+  padding: 0 15px 0 15px;
+}
+#basket_left-item-description-remove{
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #00aeff;
+}
+#basket_left-item-description-remove:hover{
+  color: #0084c2;
+}
+.basket_right{
+  width: 30%;
+  float: right;
+  background: #f5f4f2;
+  margin: 0 5% 0 5%;  
+ }
+.basket_right p{
+  padding: 5px 15px 5px 15px;
+ }
+.basket_right h3{
+  padding: 0px 15px 0px 15px;
+ }
+.basket_right-btn{
+  width: calc(100% - 10px);
+  height: 50px;
+  margin: 10px 5px 10px 5px;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: #00aeff;
+  font-weight: 550;
+  font-size: 16px;
+  color: #ffffff;
+}
+#basket_right-checkout:hover{
+  background: #0084c2;
+}
+
+ /* ############################################# CHECKOUT PAGE ############################################# */
+.checkout{
+  margin-top: 35px;
+  width: 600px;
+  margin-left: calc(50vw - 300px);
+}
+.checkout h2{
+  color: black;
+  font-size: 24px;
+  font-weight: 450;
+}
+.checkout_logo{
+  width: 100%;
+  height: 60px;
+}
+.checkout_logo-img{
+  height: 60px;
+}
+.checkout-username{
+  width: 100%;
+  background: #f5f4f2;
+  border-top: 1px solid #cfcdc8;
+  border-bottom: 1px solid #cfcdc8;
+}
+.checkout-username p{
+  padding: 12px 12px 15px 15px;
+}
+.checkout_form{
+  width: auto;
+}
+.checkout_form input[type=text]{
+  width: 100%;
+  min-height: 30px;
+}
+.checkout_form-paywith{
+  border-top: 1px solid #cfcdc8;
+  border-bottom: 1px solid #cfcdc8;
+  height: 150px;
+}
+.checkout_form-bluetext{
+  cursor: pointer;
+  color: #00aeff;
+}
+.checkout_form-bluetext:hover{
+  color: #0084c2;
+}
+#checkout_form-btn{
+  width: 100%;
+  height: 50px;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: #00aeff;
+  font-weight: 550;
+  font-size: 16px;
+  color: #ffffff;
+}
+#checkout_form-btn:hover{
+  background: #0084c2;
+}
+
+/* ############################################# LOGIN PAGE ############################################# */
+@import "compass/css3";
+
+.login-wrap {
+  position: relative;
+  margin: 0 auto;
+  background: #ebebeb;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #333;
+  padding: 15px;
+}
+
+.login-wrap h2 {
+  text-align: center;
+    font-weight: 200;
+    font-size: 2em;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.login-form {
+  padding-top: 20px;
+}
+
+.login-form input[type="text"], input[type="password"], input[type="submit"], input[type="email"], input[type="username"] {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 25px;
+  height: 40px;
+  border-radius: 5px;
+  outline: 0;
+  outline-style: none;
+}
+
+.login-form input[type="text"], input[type="password"], input[type="email"], input[type="username"] {
+  border: 1px solid #bbb;
+  padding: 0 0 0 10px;
+  font-size: 14px;
+}
+
+.login-form a {
+  text-align: center;
+  font-size: 12px;
+  color: #3498db;
+}
+
+.login-form p {
+  padding-bottom: 12px;
+}
+
+.login-form input[type="submit"] {
+  background: #e74c3c;
+  border:none;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+}
+/* ############################################# END OF LOGIN PAGE ############################################# */
+
+/* ############################################# CONTACT PAGE ############################################# */
+.contact-wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(192,192,192,1); 
+}
+
+.contact-wrap h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.contact-wrap .contact_input{
+  margin-bottom: 10px;
+}
+
+.contact-wrap .contact_input input[type="text"],
+.contact-wrap textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.contact-wrap textarea{
+  resize: none;
+  height: 80px;
+}
+
+.contact-wrap .btn input[type="submit"]{
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: #fece0c;
+  color: #332902;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#contact_error_message{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+/* ############################################# END OF CONTACT PAGE ############################################# */
+
+/* ############################################# ERROR PAGE ############################################# */
+#errorpage {
+  position: relative;
+  height: 100vh;
+}
+
+#errorpage .errorpage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.errorpage {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.errorpage .errorpage-404 {
+  position: relative;
+  height: 200px;
+  margin: 0px auto 20px;
+  z-index: -1;
+}
+
+.errorpage .errorpage-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 236px;
+  font-weight: 200;
+  margin: 0px;
+  color: #211b19;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.errorpage .errorpage-404 h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #211b19;
+  background: #fff;
+  padding: 10px 5px;
+  margin: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.errorpage a {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 13px 23px;
+  background: #777777;
+  font-size: 18px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.errorpage a:hover {
+  color: #777777;
+  background: #211b19;
+}
+
+@media only screen and (max-width: 767px) {
+  .errorpage .errorpage-404 h1 {
+    font-size: 148px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .errorpage .errorpage-404 {
+    height: 148px;
+    margin: 0px auto 10px;
+  }
+  .errorpage .errorpage-404 h1 {
+    font-size: 86px;
+  }
+  .errorpage .errorpage-404 h2 {
+    font-size: 16px;
+  }
+  .errorpage a {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+}
+
+/* ############################################# END OF ERROR PAGE ############################################# */

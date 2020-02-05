@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8", content="width=device-width, initial-scale=1">
+        <title>Contact</title><html>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+            function toggleSidemenu(){ 
+                document.getElementById("sidemenu").classList.toggle('active')
+                if (document.getElementById("sidemenu").classList == 'active')
+                    document.getElementById("body").style.marginLeft = "200px";
+                else
+                    document.getElementById("body").style.marginLeft = "5px";
+            }
+
+            function validate() {
+                var name = document.getElementById("name").value;
+                var subject = document.getElementById("subject").value;
+                //var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+                var contact_error_message = document.getElementById("contact_error_message");
+                
+                contact_error_message.style.padding = "10px";
+                
+                var text;
+                if(name.length < 5){
+                text = "Please Enter valid Name";
+                contact_error_message.innerHTML = text;
+                return false;
+                }
+                if(subject.length < 10){
+                text = "Please Enter Correct Subject";
+                contact_error_message.innerHTML = text;
+                return false;
+                }
+               
+                //if(email.indexOf("@") == -1 || email.length < 6){
+                //  text = "Please Enter valid Email";
+                //  contact_error_message.innerHTML = text;
+                //  return false;
+                //}
+                if(message.length <= 140){
+                text = "Please Enter More Than 140 Characters";
+                contact_error_message.innerHTML = text;
+                return false;
+                }
+                alert("Form Submitted Successfully!");
+                return true;
+                }
+
+        </script>
+    </head>
+
+<body id="body">
+
+    	{{#if successMsg}}
+ 			<p class="msg-success">{{successMsg}}</p>
+		{{/if}}
+        {{#if errorMsg}}
+ 			<p class="msg-danger">{{errorMsg}}</p>
+		{{/if}}
+    <section class="container">
+        <section class="header">
+            <a href="/" class="header_logo center"><button><img src="WebxLogo.png"/></button></a>
+            <section id="sidemenu">
+                <section class="toggle-btn" onclick="toggleSidemenu()">
+                    <a>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </section>
+                <ul>
+                    <a href="/"><li> Home  </li></a>
+                    {{#if authorised}}
+                        <a href="basket"><li> Basket</li></a>
+                        <a href="sell"><li> Sell </li></a>
+                        <a href="myItems"><li> My Items </li></a>
+                        <a href="account"><li> Account </li></a>
+                        <a href="logout"><li> Logout </li></a>
+                    {{else}}
+                        <a href="login"><li> Login </li></a>
+                        <a href="register"><li> Sign Up </li></a>
+                    {{/if}}
+                    <a href="about"><li> About </li></a>
+                    <a href="contact"><li> Contact </li></a>
+                </ul>
+            </section>
+        </section>
+
+        <section class="contact-wrap">
+           <h2>Contact Us</h2>
+           <section id="contact_error_message">
+
+           </section>
+           <form action="mailto:webxgallery@gmail.com" method="post" enctype="text/plain" id="contactForm" onsubmit="return validate();">
+               <section class="contact_input">
+                   <input type="text" placeholder="Name" id="name">
+                   <br><br>
+
+                   <input type="text" placeholder="Subject" id="subject">
+                   <br><br>
+
+                   <textarea placeholder="Message" id="message"></textarea>
+                   <br><br>
+               </section>
+               <section class="btn">
+                   <input type="submit">
+               </section>
+           </form>
+        </section>
+    </section>
+</body>
+
+<footer> 
+    <section class="footer-left"><p>Project for Coventry University | 2019 | This webpage was made by WebX team.</p></section>
+    <section class="footer-center"><a href="/" class="footerNav"><p>Home </a><a href="about" class="footerNav">About </a><a href="contact" class="footerNav">Contact </p></a></section>
+    <section class="footer-right"><p>Contact: <a href="contact" class="footerNav">webxgallery@gmail.com</a></p></section>
+</footer> 
+<script type="text/javascript">
+    //Put footer at the bottom of the window if page is too short
+    const bodyHeight = document.querySelector("body").offsetHeight
+    const footer = document.querySelector("footer")
+    if(bodyHeight < window.innerHeight){
+        footer.classList.add("bottom")
+    }
+</script>
+</html>

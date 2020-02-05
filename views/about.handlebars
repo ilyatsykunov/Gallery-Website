@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html>
+    <head>
+
+        <meta charset="UTF-8", content="width=device-width, initial-scale=1">
+        <title>About</title><html>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+            function toggleSidemenu(){ 
+                document.getElementById("sidemenu").classList.toggle('active')
+                if (document.getElementById("sidemenu").classList == 'active')
+                    document.getElementById("body").style.marginLeft = "200px";
+                else
+                    document.getElementById("body").style.marginLeft = "5px";
+            }
+
+
+        </script>
+    </head>
+
+<body id="body">
+    	{{#if successMsg}}
+ 			<p class="msg-success">{{successMsg}}</p>
+		{{/if}}
+        {{#if errorMsg}}
+ 			<p class="msg-danger">{{errorMsg}}</p>
+		{{/if}}
+    <section class="container">
+        <section class="header">
+            <a href="/" class="header_logo center"><button><img src="WebxLogo.png"/></button></a>
+            <section id="sidemenu">
+                <section class="toggle-btn" onclick="toggleSidemenu()">
+                    <a>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </section>
+                <ul>
+                    <a href="/"><li> Home  </li></a>
+                    {{#if authorised}}
+                        <a href="basket"><li> Basket</li></a>
+                        <a href="sell"><li> Sell </li></a>
+                        <a href="myItems"><li> My Items </li></a>
+                        <a href="account"><li> Account </li></a>
+                        <a href="logout"><li> Logout </li></a>
+                    {{else}}
+                        <a href="login"><li> Login </li></a>
+                        <a href="register"><li> Sign Up </li></a>
+                    {{/if}}
+                    <a href="about"><li> About </li></a>
+                    <a href="contact"><li> Contact </li></a>
+                </ul>
+            </section>
+        </section>
+    <h1 class="aboutheader">About</h1>
+    <h3 class="aboutheader3">Information about the gallery</h3>
+
+    
+
+<br>
+
+
+
+    <h4>
+
+    Welcome to our Gallery project. 
+
+    </h4>
+    
+    <p class="blockoftext">
+    We started this website so we could provide a fair marketplace for Artists and fans of art alike. Click one of the dots above to see some pieces of art that were previously sold here.
+    We are a small group of 7 students at Coventry University.
+
+    </p>
+
+    <section class="scrollingimage"></section>
+
+    
+    <p class="blockoftext">
+    Our aim is to make this an easy selling experience for Artists whilst also providing security through payment methods such as PayPal™. PayPal™ provides Seller Protection which can protect you from getting scammed by any devious customers:
+
+    </p>
+
+    </br>
+
+    <p class="italicstext">
+    "PayPal Seller Protection protects eligible sellers against losses due to buyer claims, credit card chargebacks and reversals resulting from unauthorised activity. To be eligible for Seller Protection, you must comply with the full terms and conditions listed in the policy."
+    </p>
+
+    </br>
+    </br>
+    </br>
+    </br>
+
+  
+</body>
+
+<footer> 
+    <section class="footer-left"><p>Project for Coventry University | 2019 | This webpage was made by WebX team.</p></section>
+    <section class="footer-center"><a href="/" class="footerNav"><p>Home </a><a href="about" class="footerNav">About </a><a href="contact" class="footerNav">Contact </p></a></section>
+    <section class="footer-right"><p>Contact: <a href="contact" class="footerNav">webxgallery@gmail.com</a></p></section>
+</footer> 
+<script type="text/javascript">
+    //Put footer at the bottom of the window if page is too short
+    const bodyHeight = document.querySelector("body").offsetHeight
+    const footer = document.querySelector("footer")
+    if(bodyHeight < window.innerHeight){
+        footer.classList.add("bottom")
+    }
+</script>
+</html>
